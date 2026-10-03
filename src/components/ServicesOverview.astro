@@ -1,0 +1,60 @@
+---
+const services = [
+  {
+    id: "nemt",
+    title: "Non-Emergency Medical Transport",
+    description: "Scheduled transportation for doctor appointments, dialysis, chemotherapy, physical therapy, and routine checkups. Door-through-door assistance included.",
+    icon: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-4 4h4m-4 4h4m-6-4v12",
+    link: "/services#nemt",
+  },
+  {
+    id: "wheelchair",
+    title: "Wheelchair Accessible Transport",
+    description: "ADA-compliant vehicles with hydraulic lifts and securement systems. Trained drivers assist with transfers and ensure safe, comfortable rides.",
+    icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
+    link: "/services#wheelchair",
+  },
+  {
+    id: "stretcher",
+    title: "Stretcher & Bariatric Transport",
+    description: "Specialized stretcher vans for patients who must remain supine. Bariatric-capable vehicles with reinforced equipment and additional staff for larger patients.",
+    icon: "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z",
+    link: "/services#stretcher",
+  },
+  {
+    id: "long-distance",
+    title: "Long Distance Medical Transport",
+    description: "Inter-city and inter-state transport for specialized care. Comfortable vehicles with medical monitoring capabilities for extended journeys.",
+    icon: "M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z",
+    link: "/services#long-distance",
+  },
+];
+---
+<section id="services" class="section bg-white" aria-labelledby="services-title">
+  <div class="container-custom">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 id="services-title" class="section-title">Our Transportation Services</h2>
+      <p class="section-subtitle">Comprehensive medical transport solutions tailored to each patient's unique needs. Every ride includes trained staff, sanitized vehicles, and real-time tracking.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {services.map(service => (
+        <article class="card p-6 group">
+          <div class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-4 group-hover:bg-primary group-hover:text-white transition-colors" aria-hidden="true">
+            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon} /></svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">{service.title}</h3>
+          <p class="text-gray-600 mb-4">{service.description}</p>
+          <a href={service.link} class="text-primary font-medium hover:text-primary-dark transition-colors inline-flex items-center gap-1">
+            Learn more
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+          </a>
+        </article>
+      ))}
+    </div>
+
+    <div class="text-center mt-12">
+      <a href="/services" class="btn-outline px-8 py-3">View All Services</a>
+    </div>
+  </div>
+</section>

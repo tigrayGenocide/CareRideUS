@@ -1,0 +1,114 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CTA from '../components/CTA.astro';
+import '../styles/global.css';
+---
+<Layout title="About CareRideUS - Our Mission & Team" description="Learn about CareRideUS's mission to provide safe, dignified medical transportation. Meet our leadership team and understand our commitment to patient care.">
+  <Header />
+  <main>
+    <section class="pt-32 pb-16 bg-gradient-to-b from-primary/5 via-white to-secondary/5">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">About CareRideUS</h1>
+          <p class="text-xl text-gray-600 leading-relaxed">Founded in 2018, CareRideUS has become the trusted partner for patients, families, and healthcare providers across the region. We believe medical transportation should be safe, dignified, and stress-free.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container-custom">
+        <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          <div>
+            <h2 class="section-title">Our Mission</h2>
+            <p class="text-gray-600 mb-6 leading-relaxed">To provide the safest, most compassionate non-emergency medical transportation experience possible—treating every passenger with the dignity, respect, and care they deserve.</p>
+            <p class="text-gray-600 mb-6 leading-relaxed">We understand that for many patients, the ride to a medical appointment is the most stressful part of their day. Mobility challenges, anxiety about appointments, and the physical discomfort of travel can all compound. Our job is to remove that burden entirely.</p>
+            <p class="text-gray-600 leading-relaxed">Every decision we make—from vehicle selection to driver training to scheduling flexibility—is guided by one question: <em class="font-medium text-gray-900">Does this make the patient's experience better?</em></p>
+          </div>
+          <div class="relative">
+            <div class="aspect-[4/3] rounded-2xl bg-gray-100 flex items-center justify-center overflow-hidden">
+              <div class="text-center p-8">
+                <svg class="w-24 h-24 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15" /></svg>
+                <p class="text-gray-500">Our Fleet & Team Photo</p>
+                <p class="text-sm text-gray-400 mt-1">Professional photography coming soon</p>
+              </div>
+            </div>
+            <div class="absolute -bottom-6 -left-6 md:-left-10 w-48 h-48 bg-primary/10 rounded-2xl" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-gray-50">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="section-title">Our Commitments</h2>
+          <p class="section-subtitle">The principles that guide every ride, every interaction, every day.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="card p-6 text-center">
+            <div class="w-16 h-16 rounded-xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Safety First</h3>
+            <p class="text-gray-600">Every vehicle inspected daily. Every driver background-checked, drug-tested, and continuously trained. Real-time GPS monitoring on every trip.</p>
+          </article>
+          <article class="card p-6 text-center">
+            <div class="w-16 h-16 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Compassionate Care</h3>
+            <p class="text-gray-600">Door-through-door assistance. Patience with mobility challenges. Clear communication. Treating every passenger like family.</p>
+          </article>
+          <article class="card p-6 text-center">
+            <div class="w-16 h-16 rounded-xl bg-accent/10 text-accent flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Reliability</h3>
+            <p class="text-gray-600">99.2% on-time rate. 24/7 dispatch. Proactive communication if delays occur. We're there when we say we'll be.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="section-title">Our Certifications & Partnerships</h2>
+          <p class="section-subtitle">We maintain the highest industry standards and work with leading healthcare organizations.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="text-center p-6">
+            <div class="w-20 h-20 rounded-xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 font-bold text-2xl" aria-hidden="true">PASS</div>
+            <h3 class="font-semibold text-gray-900 mb-2">PASS Certified Drivers</h3>
+            <p class="text-gray-600">Passenger Assistance Safety & Sensitivity certification for all drivers</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="w-20 h-20 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mx-auto mb-4 font-bold text-2xl" aria-hidden="true">ADA</div>
+            <h3 class="font-semibold text-gray-900 mb-2">ADA Compliant Fleet</h3>
+            <p class="text-gray-600">100% of wheelchair vehicles meet ADA specifications</p>
+          </div>
+          <div class="text-center p-6">
+            <div class="w-20 h-20 rounded-xl bg-accent/10 text-accent flex items-center justify-center mx-auto mb-4 font-bold text-2xl" aria-hidden="true">HIPAA</div>
+            <h3 class="font-semibold text-gray-900 mb-2">HIPAA Trained</h3>
+            <p class="text-gray-600">All staff trained in patient privacy and confidentiality</p>
+          </div>
+        </div>
+
+        <div class="mt-16 flex flex-wrap items-center justify-center gap-8 text-gray-400" aria-label="Healthcare partners">
+          <span class="text-sm font-medium text-gray-500">Trusted by:</span>
+          <span class="font-semibold">Regional Medical Center</span>
+          <span class="font-semibold">Sunrise Dialysis</span>
+          <span class="font-semibold">Hope Oncology</span>
+          <span class="font-semibold">Senior Living Communities</span>
+        </div>
+      </div>
+    </section>
+
+    <CTA />
+  </main>
+  <Footer />
+</Layout>

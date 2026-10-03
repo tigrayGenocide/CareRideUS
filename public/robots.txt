@@ -1,0 +1,10 @@
+# CareRideUS robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://carerideus.com/sitemap-index.xml
+
+# Disallow admin/private paths (none for static site)
+# Disallow: /admin/
+# Disallow: /api/

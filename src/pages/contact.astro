@@ -1,0 +1,314 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+---
+<Layout title="Contact & Book a Ride - CareRideUS" description="Book a medical transport ride online or contact CareRideUS. Phone: (800) 555-0199. Email: info@carerideus.com. Online booking form available 24/7.">
+  <Header />
+  <main>
+    <section class="pt-32 pb-16 bg-gradient-to-b from-primary/5 via-white to-secondary/5">
+      <div class="container-custom">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Book a Ride or Contact Us</h1>
+          <p class="text-xl text-gray-600 leading-relaxed">Schedule online in minutes or call our 24/7 scheduling team. We'll confirm your ride within 15 minutes during business hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="container-custom">
+        <div class="grid lg:grid-cols-3 gap-12">
+          <div class="lg:col-span-1 space-y-8">
+            <div class="p-6 bg-gray-50 rounded-xl">
+              <h3 class="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                Call to Book
+              </h3>
+              <a href="tel:+18005550199" class="text-2xl font-bold text-primary hover:text-primary-dark transition-colors block mb-2">(800) 555-0199</a>
+              <p class="text-gray-600 text-sm">24/7 scheduling support</p>
+            </div>
+
+            <div class="p-6 bg-gray-50 rounded-xl">
+              <h3 class="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                Email Us
+              </h3>
+              <a href="mailto:info@carerideus.com" class="text-primary hover:text-primary-dark transition-colors block mb-2">info@carerideus.com</a>
+              <a href="mailto:billing@carerideus.com" class="text-primary hover:text-primary-dark transition-colors block text-sm">billing@carerideus.com</a>
+              <p class="text-gray-600 text-sm mt-2">Responses within 2 hours business hours</p>
+            </div>
+
+            <div class="p-6 bg-gray-50 rounded-xl">
+              <h3 class="font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                Office Location
+              </h3>
+              <address class="not-italic text-gray-700 leading-relaxed">
+                123 Medical Center Dr, Suite 100<br />
+                Healthcare District, HC 12345
+              </address>
+              <p class="text-gray-600 text-sm mt-2">Mon-Fri: 6AM - 8PM | Sat-Sun: 8AM - 6PM</p>
+            </div>
+          </div>
+
+          <div class="lg:col-span-2">
+            <form id="booking-form" class="card p-6 lg:p-8" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY" />
+              <input type="hidden" name="subject" value="CareRideUS Booking Request" />
+              <input type="hidden" name="redirect" value="/contact?success=true" />
+
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">Online Booking Request</h2>
+
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="service-type" class="label">Service Type *</label>
+                  <select id="service-type" name="service_type" class="input" required>
+                    <option value="">Select service</option>
+                    <option value="nemt">Non-Emergency Medical Transport (NEMT)</option>
+                    <option value="wheelchair">Wheelchair Accessible Transport</option>
+                    <option value="stretcher">Stretcher Transport</option>
+                    <option value="bariatric">Bariatric Transport (up to 1,000 lbs)</option>
+                    <option value="long-distance">Long Distance Medical Transport</option>
+                    <option value="unsure">Not Sure - Need Guidance</option>
+                  </select>
+                </div>
+                <div>
+                  <label for="trip-type" class="label">Trip Type *</label>
+                  <select id="trip-type" name="trip_type" class="input" required>
+                    <option value="">Select trip type</option>
+                    <option value="one-way">One Way</option>
+                    <option value="round-trip">Round Trip</option>
+                    <option value="recurring">Recurring (Weekly/Monthly)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="pickup-date" class="label">Pickup Date *</label>
+                  <input type="date" id="pickup-date" name="pickup_date" class="input" required min={new Date().toISOString().split('T')[0]} />
+                </div>
+                <div>
+                  <label for="pickup-time" class="label">Pickup Time *</label>
+                  <input type="time" id="pickup-time" name="pickup_time" class="input" required />
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="pickup-location" class="label">Pickup Address *</label>
+                  <textarea id="pickup-location" name="pickup_location" class="input min-h-[100px] resize-y" rows="3" required placeholder="Street address, facility name, apartment/unit #"></textarea>
+                </div>
+                <div>
+                  <label for="dropoff-location" class="label">Drop-off Address *</label>
+                  <textarea id="dropoff-location" name="dropoff_location" class="input min-h-[100px] resize-y" rows="3" required placeholder="Street address, facility name, department/suite #"></textarea>
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="passenger-name" class="label">Passenger Name *</label>
+                  <input type="text" id="passenger-name" name="passenger_name" class="input" required placeholder="Full name of passenger" />
+                </div>
+                <div>
+                  <label for="passenger-phone" class="label">Passenger Phone *</label>
+                  <input type="tel" id="passenger-phone" name="passenger_phone" class="input" required placeholder="(555) 123-4567" />
+                </div>
+              </div>
+
+              <div class="grid md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label for="contact-name" class="label">Your Name (if different)</label>
+                  <input type="text" id="contact-name" name="contact_name" class="input" placeholder="Your full name" />
+                </div>
+                <div>
+                  <label for="contact-phone" class="label">Your Phone *</label>
+                  <input type="tel" id="contact-phone" name="contact_phone" class="input" required placeholder="(555) 123-4567" />
+                </div>
+              </div>
+
+              <div class="mb-6">
+                <label for="contact-email" class="label">Your Email *</label>
+                <input type="email" id="contact-email" name="contact_email" class="input" required placeholder="you@example.com" />
+              </div>
+
+              <div class="mb-6">
+                <label for="special-instructions" class="label">Special Instructions / Medical Notes</label>
+                <textarea id="special-instructions" name="special_instructions" class="input min-h-[120px] resize-y" rows="4" placeholder="Oxygen needed, mobility details, equipment, language preference, insurance info, etc."></textarea>
+              </div>
+
+              <div class="flex items-start gap-3 mb-6">
+                <input type="checkbox" id="terms" name="terms" class="mt-1 w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary" required />
+                <label for="terms" class="text-sm text-gray-700">I agree to the <a href="/terms" class="text-primary hover:underline">Terms of Service</a> and <a href="/privacy" class="text-primary hover:underline">Privacy Policy</a>, and authorize CareRideUS to contact me regarding this booking. *</label>
+              </div>
+
+              <button type="submit" class="btn-primary w-full sm:w-auto text-lg px-8 py-4" id="submit-btn">Submit Booking Request</button>
+
+              <p class="text-sm text-gray-500 mt-4 text-center">We'll confirm your booking within 15 minutes during business hours. For urgent same-day needs, please call (800) 555-0199.</p>
+            </form>
+
+            <div id="form-success" class="hidden card p-6 lg:p-8 text-center bg-green-50 border-green-100">
+              <svg class="w-16 h-16 text-green-600 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <h3 class="text-2xl font-bold text-green-900 mb-2">Booking Request Submitted!</h3>
+              <p class="text-green-700 mb-4">Thank you! Our scheduling team will contact you within 15 minutes to confirm your ride details.</p>
+              <a href="/" class="btn-primary">Return Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="section bg-gray-50">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h2 class="section-title">Frequently Asked Questions</h2>
+          <p class="section-subtitle">Quick answers to common questions about booking and using our service.</p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+          {[
+            {
+              q: "How far in advance should I book?",
+              a: "We recommend booking at least 48 hours in advance for guaranteed availability. However, we often accommodate same-day requests—call (800) 555-0199 for urgent needs."
+            },
+            {
+              q: "Do you accept insurance / Medicaid / Medicare?",
+              a: "Yes! We work with Medicare, Medicaid, most private insurers, and managed care plans. We handle direct billing for approved trips. Provide your insurance info when booking and we'll verify coverage."
+            },
+            {
+              q: "Can a family member or caregiver ride along?",
+              a: "Absolutely. One companion rides free with the patient. Additional companions may be accommodated based on vehicle capacity—let us know when booking."
+            },
+            {
+              q: "What if my appointment runs late?",
+              a: "We track appointment times and build in buffer. If your appointment runs over, your driver will wait (up to 30 minutes included). Extended wait time is billed at a nominal rate."
+            },
+            {
+              q: "Do you provide door-through-door service?",
+              a: "Yes. Our drivers assist from your door, through lobbies, elevators, and to the check-in desk. We don't just drop you at the curb."
+            },
+            {
+              q: "What COVID-19 precautions do you take?",
+              a: "All vehicles are sanitized with hospital-grade disinfectant between every ride. Drivers wear masks upon request. HEPA filtration in all vehicles. Hand sanitizer available."
+            },
+          ].map((faq, i) => (
+            <details class="group bg-white rounded-xl border border-gray-200 p-6" open={i === 0}>
+              <summary class="flex items-center justify-between cursor-pointer list-none font-medium text-gray-900">
+                {faq.q}
+                <svg class="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+              </summary>
+              <div class="mt-4 pt-4 border-t border-gray-100 text-gray-600 leading-relaxed">{faq.a}</div>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <section id="insurance" class="section bg-white">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="section-title">Insurance & Payment Options</h2>
+          <p class="section-subtitle">We work with most major insurers and offer flexible payment options for self-pay patients.</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {[
+            { title: "Medicare", desc: "Part B covers NEMT when medically necessary", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
+            { title: "Medicaid", desc: "NEMT benefit in most state plans", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
+            { title: "Private Insurance", desc: "Most major carriers accepted", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
+            { title: "Self-Pay", desc: "Competitive rates, payment plans available", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
+          ].map(item => (
+            <div class="card p-6 text-center">
+              <div class="w-14 h-14 rounded-xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} /></svg>
+              </div>
+              <h3 class="font-semibold text-gray-900 mb-1">{item.title}</h3>
+              <p class="text-sm text-gray-600">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div class="p-6 bg-gray-50 rounded-xl text-center">
+          <p class="text-gray-700 mb-4">Have questions about coverage? Our billing team will verify your benefits at no cost.</p>
+          <a href="tel:+18005550199" class="btn-secondary">Call to Verify Insurance</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="booking" class="section bg-gray-50">
+      <div class="container-custom">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <h2 class="section-title">How to Book</h2>
+          <p class="section-subtitle">Three easy ways to schedule your medical transportation.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <article class="card p-6 text-center relative">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold" aria-hidden="true">1</div>
+            <div class="mt-8">
+              <h3 class="font-semibold text-gray-900 mb-2">Submit Request</h3>
+              <p class="text-gray-600">Fill out our online form or call our 24/7 scheduling line with trip details.</p>
+            </div>
+          </article>
+          <article class="card p-6 text-center relative">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold" aria-hidden="true">2</div>
+            <div class="mt-8">
+              <h3 class="font-semibold text-gray-900 mb-2">We Confirm</h3>
+              <p class="text-gray-600">Our team verifies details, checks insurance, and sends confirmation with driver info.</p>
+            </div>
+          </article>
+          <article class="card p-6 text-center relative">
+            <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold" aria-hidden="true">3</div>
+            <div class="mt-8">
+              <h3 class="font-semibold text-gray-900 mb-2">We Arrive</h3>
+              <p class="text-gray-600">Driver arrives on time, assists passenger door-through-door to appointment.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<script is:inline>
+  // Check for success redirect
+  const urlParams = new URLSearchParams(window.location.search);
+  if (urlParams.get('success') === 'true') {
+    document.getElementById('booking-form').classList.add('hidden');
+    document.getElementById('form-success').classList.remove('hidden');
+  }
+
+  // Form submission handling
+  const form = document.getElementById('booking-form');
+  if (form) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const submitBtn = document.getElementById('submit-btn');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
+
+      try {
+        const formData = new FormData(form);
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          form.classList.add('hidden');
+          document.getElementById('form-success').classList.remove('hidden');
+        } else {
+          throw new Error('Submission failed');
+        }
+      } catch (error) {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+        alert('Something went wrong. Please try again or call (800) 555-0199.');
+      }
+    });
+  }
+</script>
