@@ -1,3 +1,0 @@
-# Cloudflare Pages redirects
-# SPA fallback (not needed for static site but good to have)
-/* /index.html 200
