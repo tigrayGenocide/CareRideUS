@@ -8,102 +8,140 @@ import '../styles/global.css';
 <Layout title="About CareRideUS - Our Mission & Team" description="Learn about CareRideUS's mission to provide safe, dignified medical transportation. Meet our leadership team and understand our commitment to patient care.">
   <Header />
   <main>
-    <section class="pt-32 pb-16 bg-gradient-to-b from-primary/5 via-white to-secondary/5">
-      <div class="container-custom">
-        <div class="max-w-3xl mx-auto text-center">
-          <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">About CareRideUS</h1>
-          <p class="text-xl text-gray-600 leading-relaxed">Founded in 2018, CareRideUS has become the trusted partner for patients, families, and healthcare providers across the region. We believe medical transportation should be safe, dignified, and stress-free.</p>
-        </div>
+    <!-- Hero Section -->
+    <section class="relative min-h-[60vh] sm:min-h-[70vh] flex items-center justify-center pt-18 lg:pt-20 overflow-hidden bg-gradient-mesh" aria-labelledby="about-hero-title">
+      <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+        <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[var(--color-accent)]/10 blur-3xl"></div>
+        <div class="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-[var(--color-secondary)]/10 blur-3xl"></div>
+      </div>
+      <div class="container relative z-10 px-4 py-16 lg:py-24 text-center">
+        <span class="badge-accent mb-6 inline-block animate-slide-up">About Us</span>
+        <h1 id="about-hero-title" class="heading-1 text-[var(--color-primary)] mb-6 animate-slide-up delay-100">About CareRideUS</h1>
+        <p class="body-lg max-w-3xl mx-auto animate-slide-up delay-200">Founded in 2018, CareRideUS has become the trusted partner for patients, families, and healthcare providers across the region. We believe medical transportation should be safe, dignified, and stress-free.</p>
       </div>
     </section>
 
-    <section class="section bg-white">
-      <div class="container-custom">
+    <!-- Mission Section -->
+    <section class="section relative" aria-labelledby="mission-title">
+      <div class="container">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div>
-            <h2 class="section-title">Our Mission</h2>
-            <p class="text-gray-600 mb-6 leading-relaxed">To provide the safest, most compassionate non-emergency medical transportation experience possible—treating every passenger with the dignity, respect, and care they deserve.</p>
-            <p class="text-gray-600 mb-6 leading-relaxed">We understand that for many patients, the ride to a medical appointment is the most stressful part of their day. Mobility challenges, anxiety about appointments, and the physical discomfort of travel can all compound. Our job is to remove that burden entirely.</p>
-            <p class="text-gray-600 leading-relaxed">Every decision we make—from vehicle selection to driver training to scheduling flexibility—is guided by one question: <em class="font-medium text-gray-900">Does this make the patient's experience better?</em></p>
+          <div class="animate-slide-up">
+            <span class="badge-primary mb-6 inline-block">Our Mission</span>
+            <h2 id="mission-title" class="heading-2 text-[var(--color-primary)] mb-6">Compassion in Every Mile</h2>
+            <div class="space-y-6 text-[var(--color-text-muted)] leading-relaxed">
+              <p>We understand that for many patients, the ride to a medical appointment is the most stressful part of their day. Mobility challenges, anxiety about appointments, and the physical discomfort of travel can all compound. Our job is to remove that burden entirely.</p>
+              <p>Every decision we make—from vehicle selection to driver training to scheduling flexibility—is guided by one question: <em class="font-semibold text-[var(--color-text)]">"Does this make the patient's experience better?"</em></p>
+              <p>We don't just transport patients. We provide peace of mind for families, reliability for healthcare partners, and dignity for every person who steps into our vehicles.</p>
+            </div>
           </div>
-          <div class="relative">
-            <div class="aspect-[4/3] rounded-2xl bg-gray-100 flex items-center justify-center overflow-hidden">
-              <div class="text-center p-8">
-                <svg class="w-24 h-24 mx-auto text-gray-300 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 4.5v15m7.5-7.5h-15" /></svg>
-                <p class="text-gray-500">Our Fleet & Team Photo</p>
-                <p class="text-sm text-gray-400 mt-1">Professional photography coming soon</p>
+          <div class="relative animate-slide-up delay-200">
+            <div class="aspect-[4/3] rounded-3xl bg-[var(--color-surface-alt)] flex items-center justify-center overflow-hidden border border-[var(--color-border)]/50">
+              <div class="text-center p-12">
+                <div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-[var(--color-accent)]/10 to-[var(--color-secondary)]/10 flex items-center justify-center mx-auto mb-6" aria-hidden="true">
+                  <svg class="w-12 h-12 text-[var(--color-accent)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                </div>
+                <p class="text-[var(--color-text-muted)]">Our Team & Fleet</p>
+                <p class="text-sm text-[var(--color-text-light)] mt-1">Professional photography coming soon</p>
               </div>
             </div>
-            <div class="absolute -bottom-6 -left-6 md:-left-10 w-48 h-48 bg-primary/10 rounded-2xl" aria-hidden="true"></div>
+            <div class="absolute -bottom-6 -right-6 lg:-right-12 w-56 h-56 rounded-2xl bg-gradient-to-br from-[var(--color-accent)]/20 to-[var(--color-secondary)]/20" aria-hidden="true"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section bg-gray-50">
-      <div class="container-custom">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="section-title">Our Commitments</h2>
-          <p class="section-subtitle">The principles that guide every ride, every interaction, every day.</p>
+    <!-- Commitments Section -->
+    <section class="section bg-[var(--color-surface-alt)]" aria-labelledby="commitments-title">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 animate-slide-up">
+          <span class="badge-secondary mb-6 inline-block">Our Commitments</span>
+          <h2 id="commitments-title" class="heading-2 text-[var(--color-primary)] mb-6">The Principles That Guide Every Ride</h2>
+          <p class="body-lg">The principles that guide every ride, every interaction, every day.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-6">
-          <article class="card p-6 text-center">
-            <div class="w-16 h-16 rounded-xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">Safety First</h3>
-            <p class="text-gray-600">Every vehicle inspected daily. Every driver background-checked, drug-tested, and continuously trained. Real-time GPS monitoring on every trip.</p>
-          </article>
-          <article class="card p-6 text-center">
-            <div class="w-16 h-16 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">Compassionate Care</h3>
-            <p class="text-gray-600">Door-through-door assistance. Patience with mobility challenges. Clear communication. Treating every passenger like family.</p>
-          </article>
-          <article class="card p-6 text-center">
-            <div class="w-16 h-16 rounded-xl bg-accent/10 text-accent flex items-center justify-center mx-auto mb-4" aria-hidden="true">
-              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-            </div>
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">Reliability</h3>
-            <p class="text-gray-600">99.2% on-time rate. 24/7 dispatch. Proactive communication if delays occur. We're there when we say we'll be.</p>
-          </article>
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
+          {[
+            {
+              icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+              color: "from-[var(--color-accent)] to-[var(--color-accent-dark)]",
+              title: "Safety First",
+              description: "Every vehicle inspected daily. Every driver background-checked, drug-tested, and continuously trained. Real-time GPS monitoring on every trip."
+            },
+            {
+              icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
+              color: "from-[var(--color-secondary)] to-[#0d9488]",
+              title: "Compassionate Care",
+              description: "Door-through-door assistance. Patience with mobility challenges. Clear communication. Treating every passenger like family."
+            },
+            {
+              icon: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z",
+              color: "from-[var(--color-warm)] to-[var(--color-warm-light)]",
+              title: "Reliability",
+              description: "99.2% on-time rate. 24/7 dispatch. Proactive communication if delays occur. We're there when we say we'll be."
+            },
+          ].map((commitment, i) => (
+            <article class="card-elevated p-6 lg:p-8 group animate-slide-up" style={{ animationDelay: `${i * 100}ms` }}>
+              <div class="relative w-14 h-14 rounded-2xl bg-gradient-to-br {commitment.color}/10 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:{commitment.color} group-hover:text-white transition-all duration-300" aria-hidden="true">
+                <svg class="w-7 h-7 text-[var(--color-accent)] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={commitment.icon} /></svg>
+              </div>
+              <h3 class="heading-4 text-[var(--color-primary)] mb-3">{commitment.title}</h3>
+              <p class="body-sm">{commitment.description}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
 
-    <section class="section bg-white">
-      <div class="container-custom">
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <h2 class="section-title">Our Certifications & Partnerships</h2>
-          <p class="section-subtitle">We maintain the highest industry standards and work with leading healthcare organizations.</p>
+    <!-- Certifications Section -->
+    <section class="section relative" aria-labelledby="certifications-title">
+      <div class="container">
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 animate-slide-up">
+          <span class="badge-warm mb-6 inline-block">Certifications & Partnerships</span>
+          <h2 id="certifications-title" class="heading-2 text-[var(--color-primary)] mb-6">Standards That Matter</h2>
+          <p class="body-lg">We maintain the highest industry standards and work with leading healthcare organizations.</p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-          <div class="text-center p-6">
-            <div class="w-20 h-20 rounded-xl bg-primary/10 text-primary flex items-center justify-center mx-auto mb-4 font-bold text-2xl" aria-hidden="true">PASS</div>
-            <h3 class="font-semibold text-gray-900 mb-2">PASS Certified Drivers</h3>
-            <p class="text-gray-600">Passenger Assistance Safety & Sensitivity certification for all drivers</p>
-          </div>
-          <div class="text-center p-6">
-            <div class="w-20 h-20 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mx-auto mb-4 font-bold text-2xl" aria-hidden="true">ADA</div>
-            <h3 class="font-semibold text-gray-900 mb-2">ADA Compliant Fleet</h3>
-            <p class="text-gray-600">100% of wheelchair vehicles meet ADA specifications</p>
-          </div>
-          <div class="text-center p-6">
-            <div class="w-20 h-20 rounded-xl bg-accent/10 text-accent flex items-center justify-center mx-auto mb-4 font-bold text-2xl" aria-hidden="true">HIPAA</div>
-            <h3 class="font-semibold text-gray-900 mb-2">HIPAA Trained</h3>
-            <p class="text-gray-600">All staff trained in patient privacy and confidentiality</p>
-          </div>
+        <div class="grid md:grid-cols-3 gap-6 lg:gap-8 mb-16 lg:mb-20">
+          {[
+            { 
+              title: "PASS Certified Drivers", 
+              desc: "Passenger Assistance Safety & Sensitivity certification for all drivers",
+              icon: "PASS",
+              color: "from-[var(--color-accent)] to-[var(--color-accent-dark)]"
+            },
+            { 
+              title: "ADA Compliant Fleet", 
+              desc: "100% of wheelchair vehicles meet ADA specifications",
+              icon: "ADA",
+              color: "from-[var(--color-secondary)] to-[#0d9488]"
+            },
+            { 
+              title: "HIPAA Trained", 
+              desc: "All staff trained in patient privacy and confidentiality",
+              icon: "HIPAA",
+              color: "from-[var(--color-warm)] to-[var(--color-warm-light)]"
+            },
+          ].map((cert, i) => (
+            <div class="card-elevated p-6 lg:p-8 text-center group animate-slide-up" style={{ animationDelay: `${i * 100}ms` }}>
+              <div class="w-20 h-20 rounded-2xl bg-gradient-to-br {cert.color}/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-gradient-to-br group-hover:{cert.color} group-hover:text-white transition-all duration-300" aria-hidden="true">
+                <span class="font-bold text-2xl text-[var(--color-accent)] group-hover:text-white transition-colors duration-300">{cert.icon}</span>
+              </div>
+              <h3 class="heading-4 text-[var(--color-primary)] mb-2">{cert.title}</h3>
+              <p class="body-sm">{cert.desc}</p>
+            </div>
+          ))}
         </div>
 
-        <div class="mt-16 flex flex-wrap items-center justify-center gap-8 text-gray-400" aria-label="Healthcare partners">
-          <span class="text-sm font-medium text-gray-500">Trusted by:</span>
-          <span class="font-semibold">Regional Medical Center</span>
-          <span class="font-semibold">Sunrise Dialysis</span>
-          <span class="font-semibold">Hope Oncology</span>
-          <span class="font-semibold">Senior Living Communities</span>
+        <!-- Trusted by -->
+        <div class="animate-slide-up delay-300">
+          <p class="text-center text-sm font-medium text-[var(--color-text-light)] uppercase tracking-wider mb-8">Trusted by Healthcare Partners</p>
+          <div class="flex flex-wrap items-center justify-center gap-6 lg:gap-10 text-[var(--color-text-light)]/60 opacity-70">
+            <span class="font-semibold text-[var(--color-text-muted)]">Regional Medical Center</span>
+            <span class="font-semibold text-[var(--color-text-muted)]">Sunrise Dialysis</span>
+            <span class="font-semibold text-[var(--color-text-muted)]">Hope Oncology</span>
+            <span class="font-semibold text-[var(--color-text-muted)]">Senior Living Communities</span>
+            <span class="font-semibold text-[var(--color-text-muted)]">Medicaid Managed Care</span>
+          </div>
         </div>
       </div>
     </section>

@@ -4,49 +4,58 @@ const features = [
     title: "Trained & Certified Staff",
     description: "All drivers complete PASS certification, CPR/First Aid, HIPAA training, and sensitivity training for elderly and disabled passengers.",
     icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z",
+    color: "from-[var(--color-accent)] to-[var(--color-accent-dark)]",
   },
   {
     title: "Modern, Sanitized Fleet",
     description: "Late-model vehicles with hospital-grade sanitization between every ride. GPS-tracked, climate-controlled, and ADA-compliant.",
     icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10",
+    color: "from-[var(--color-secondary)] to-[#0d9488]",
   },
   {
     title: "Door-Through-Door Service",
     description: "We don't just drop you at the curb. Our team assists from your door, through lobbies, to the check-in desk and back.",
     icon: "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z",
+    color: "from-[var(--color-warm)] to-[var(--color-warm-light)]",
   },
   {
     title: "Real-Time Tracking & Updates",
     description: "Family members and care coordinators receive live ETA updates via SMS/email. Know exactly when your loved one arrives.",
     icon: "M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122",
+    color: "from-[#8b5cf6] to-[#a855f7]",
   },
   {
     title: "Insurance & Medicaid Billing",
     description: "We work directly with Medicare, Medicaid, private insurance, and managed care organizations. Direct billing available for approved trips.",
     icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z",
+    color: "from-[var(--color-success)] to-[#059669]",
   },
   {
     title: "24/7 Scheduling Support",
     description: "Book online, by phone, or through our portal anytime. Recurring appointments auto-scheduled. Urgent same-day requests accommodated when possible.",
     icon: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z",
+    color: "from-[#ec4899] to-[#f43f5e]",
   },
 ];
 ---
-<section class="section bg-gray-50" aria-labelledby="features-title">
-  <div class="container-custom">
-    <div class="text-center max-w-3xl mx-auto mb-16">
-      <h2 id="features-title" class="section-title">Why Choose CareRideUS</h2>
-      <p class="section-subtitle">We understand medical transportation isn't just about getting from A to B. It's about safety, dignity, and peace of mind for patients and their families.</p>
+<section class="section relative bg-[var(--color-surface-alt)]" aria-labelledby="features-title">
+  <div class="container relative z-10">
+    <!-- Section header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 animate-slide-up">
+      <span class="badge-primary mb-6 inline-block">Why Choose CareRideUS</span>
+      <h2 id="features-title" class="heading-2 text-[var(--color-primary)] mb-6">More Than Just a Ride</h2>
+      <p class="body-lg">We understand medical transportation isn't just about getting from A to B. It's about safety, dignity, and peace of mind for patients and their families.</p>
     </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {features.map(feature => (
-        <article class="card p-6">
-          <div class="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4" aria-hidden="true">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon} /></svg>
+    <!-- Feature cards -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+      {features.map((feature, i) => (
+        <article class="card-elevated p-6 lg:p-8 group animate-slide-up" style={{ animationDelay: `${i * 100}ms` }}>
+          <div class="relative w-14 h-14 rounded-2xl bg-gradient-to-br {feature.color}/10 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:{feature.color} group-hover:text-white transition-all duration-300" aria-hidden="true">
+            <svg class="w-7 h-7 text-[var(--color-accent)] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={feature.icon} /></svg>
           </div>
-          <h3 class="text-lg font-semibold text-gray-900 mb-2">{feature.title}</h3>
-          <p class="text-gray-600">{feature.description}</p>
+          <h3 class="heading-4 text-[var(--color-primary)] mb-3">{feature.title}</h3>
+          <p class="body-sm">{feature.description}</p>
         </article>
       ))}
     </div>

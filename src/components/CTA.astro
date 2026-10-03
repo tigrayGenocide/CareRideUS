@@ -16,16 +16,43 @@ const {
   secondaryHref = "tel:+18005550199",
 } = Astro.props;
 ---
-<section class="section bg-primary text-white" aria-labelledby="cta-title">
-  <div class="container-custom text-center">
-    <h2 id="cta-title" class="text-3xl sm:text-4xl font-bold mb-4">{title}</h2>
-    <p class="text-primary-100 text-lg mb-8 max-w-2xl mx-auto">{subtitle}</p>
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href={primaryHref} class="btn bg-white text-primary hover:bg-gray-100 text-lg px-8 py-4 w-full sm:w-auto">{primaryText}</a>
-      <a href={secondaryHref} class="btn border-2 border-white text-white hover:bg-white/10 text-lg px-8 py-4 w-full sm:w-auto flex items-center justify-center gap-2">
+<section class="section relative overflow-hidden bg-gradient-to-br from-[var(--color-primary)] via-[var(--color-primary-light)] to-[var(--color-primary)]" aria-labelledby="cta-title">
+  <!-- Background decoration -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-[var(--color-accent)]/10 blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-[var(--color-secondary)]/10 blur-3xl"></div>
+  </div>
+
+  <div class="container relative z-10 text-center max-w-3xl mx-auto">
+    <span class="badge-warm mb-6 inline-block animate-slide-up">Ready to Book?</span>
+    <h2 id="cta-title" class="heading-2 text-white mb-6 animate-slide-up delay-100">{title}</h2>
+    <p class="body-lg text-white/80 mb-10 animate-slide-up delay-200">{subtitle}</p>
+    
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-4 animate-slide-up delay-300">
+      <a href={primaryHref} class="btn bg-white text-[var(--color-primary)] hover:bg-white/90 text-lg px-10 py-4 w-full sm:w-auto shadow-xl shadow-[var(--color-primary)]/25">
+        {primaryText}
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+      </a>
+      <a href={secondaryHref} class="btn border-2 border-white/30 text-white hover:border-white hover:bg-white/10 text-lg px-10 py-4 w-full sm:w-auto flex items-center justify-center gap-2">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
         {secondaryText}
       </a>
+    </div>
+
+    <!-- Trust indicators -->
+    <div class="mt-12 flex flex-wrap items-center justify-center gap-6 text-sm text-white/60 animate-slide-up delay-400">
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-[var(--color-success)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <span>No hidden fees</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-[var(--color-success)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <span>Cancel anytime</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <svg class="w-5 h-5 text-[var(--color-success)]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <span>Insurance accepted</span>
+      </div>
     </div>
   </div>
 </section>
