@@ -237,8 +237,8 @@ import '../styles/global.css';
             { title: "Private Insurance", desc: "Most major carriers accepted", color: "from-[var(--color-warm)] to-[var(--color-warm-light)]", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
             { title: "Self-Pay", desc: "Competitive rates, payment plans available", color: "from-[#8b5cf6] to-[#a855f7]", icon: "M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" },
           ].map((item, i) => (
-            <div class="card-elevated p-6 text-center group animate-slide-up" style={{ animationDelay: `${i * 100}ms` }}>
-              <div class="w-14 h-14 rounded-2xl bg-gradient-to-br {item.color}/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-to-br group-hover:{item.color} group-hover:text-white transition-all duration-300" aria-hidden="true">
+            <div class="card-elevated p-6 text-center group animate-slide-up" style={`animation-delay: ${i * 100}ms`}>
+              <div class={`w-14 h-14 rounded-2xl bg-gradient-to-br ${item.color}/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-gradient-to-br group-hover:${item.color} group-hover:text-white transition-all duration-300`} aria-hidden="true">
                 <svg class="w-7 h-7 text-[var(--color-accent)] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={item.icon} /></svg>
               </div>
               <h3 class="heading-4 text-[var(--color-primary)] mb-2">{item.title}</h3>
@@ -272,7 +272,7 @@ import '../styles/global.css';
             { step: "2", title: "We Confirm", desc: "Our team verifies details, checks insurance, and sends confirmation with driver info.", icon: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" },
             { step: "3", title: "We Arrive", desc: "Driver arrives on time, assists passenger door-through-door to appointment.", icon: "M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" },
           ].map((step, i) => (
-            <article class="card-elevated p-6 lg:p-8 text-center relative group animate-slide-up" style={{ animationDelay: `${i * 150}ms` }}>
+            <article class="card-elevated p-6 lg:p-8 text-center relative group animate-slide-up" style={`animation-delay: ${i * 150}ms`}>
               <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-gradient-to-br from-[var(--color-accent)] to-[var(--color-secondary)] flex items-center justify-center text-white font-bold text-xl" aria-hidden="true">{step.step}</div>
               <div class="mt-8">
                 <div class="w-14 h-14 rounded-2xl bg-[var(--color-accent)]/10 flex items-center justify-center mx-auto mb-4 group-hover:bg-[var(--color-accent)] group-hover:text-white transition-all duration-300" aria-hidden="true">

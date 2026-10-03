@@ -46,13 +46,13 @@ const services = [
     <!-- Service cards -->
     <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
       {services.map((service, i) => (
-        <article class="card-elevated group relative overflow-hidden animate-slide-up" style={{ animationDelay: `${i * 100}ms` }}>
+        <article class="card-elevated group relative overflow-hidden animate-slide-up" style={`animation-delay: ${i * 100}ms`}>
           <!-- Color accent bar -->
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r {service.color}"></div>
+          <div class={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color}`}></div>
           
           <div class="p-6 lg:p-8 h-full flex flex-col">
             <!-- Icon -->
-            <div class="relative w-14 h-14 rounded-2xl bg-gradient-to-br {service.color}/10 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:{service.color} group-hover:text-white transition-all duration-300" aria-hidden="true">
+            <div class={`relative w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color}/10 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:${service.color} group-hover:text-white transition-all duration-300`} aria-hidden="true">
               <svg class="w-7 h-7 text-[var(--color-accent)] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={service.icon} /></svg>
             </div>
 

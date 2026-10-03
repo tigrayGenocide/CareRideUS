@@ -80,8 +80,8 @@ import '../styles/global.css';
               description: "99.2% on-time rate. 24/7 dispatch. Proactive communication if delays occur. We're there when we say we'll be."
             },
           ].map((commitment, i) => (
-            <article class="card-elevated p-6 lg:p-8 group animate-slide-up" style={{ animationDelay: `${i * 100}ms` }}>
-              <div class="relative w-14 h-14 rounded-2xl bg-gradient-to-br {commitment.color}/10 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:{commitment.color} group-hover:text-white transition-all duration-300" aria-hidden="true">
+            <article class="card-elevated p-6 lg:p-8 group animate-slide-up" style={`animation-delay: ${i * 100}ms`}>
+              <div class={`relative w-14 h-14 rounded-2xl bg-gradient-to-br ${commitment.color}/10 flex items-center justify-center mb-6 group-hover:bg-gradient-to-br group-hover:${commitment.color} group-hover:text-white transition-all duration-300`} aria-hidden="true">
                 <svg class="w-7 h-7 text-[var(--color-accent)] group-hover:text-white transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d={commitment.icon} /></svg>
               </div>
               <h3 class="heading-4 text-[var(--color-primary)] mb-3">{commitment.title}</h3>
@@ -122,8 +122,8 @@ import '../styles/global.css';
               color: "from-[var(--color-warm)] to-[var(--color-warm-light)]"
             },
           ].map((cert, i) => (
-            <div class="card-elevated p-6 lg:p-8 text-center group animate-slide-up" style={{ animationDelay: `${i * 100}ms` }}>
-              <div class="w-20 h-20 rounded-2xl bg-gradient-to-br {cert.color}/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-gradient-to-br group-hover:{cert.color} group-hover:text-white transition-all duration-300" aria-hidden="true">
+            <div class="card-elevated p-6 lg:p-8 text-center group animate-slide-up" style={`animation-delay: ${i * 100}ms`}>
+              <div class={`w-20 h-20 rounded-2xl bg-gradient-to-br ${cert.color}/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-gradient-to-br group-hover:${cert.color} group-hover:text-white transition-all duration-300`} aria-hidden="true">
                 <span class="font-bold text-2xl text-[var(--color-accent)] group-hover:text-white transition-colors duration-300">{cert.icon}</span>
               </div>
               <h3 class="heading-4 text-[var(--color-primary)] mb-2">{cert.title}</h3>
